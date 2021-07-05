@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+	<!-- <bean class="concierto.instrumentos.Instrumento" id="tambor" scope="prototype">
+		<constructor-arg name="sonido" value="pom, pom, pom en constructor xml"></constructor-arg>
+	</bean>
+	<bean class="concierto.instrumentos.Instrumento" id="trompeta">
+		<property name="sonido" value="tuuu, tuuu, tuuu en xml"></property>
+	</bean>
+	<bean class="concierto.instrumentos.Instrumento" id="guitarra">
+		<property name="sonido" value="tlan, tlan, tlan en xml"></property>
+	</bean>
+	<bean class="concierto.musicos.Solista" id="solista">
+		<property name="instrumento" ref="tambor"></property>
+	</bean>
+	<bean class="concierto.musicos.HombreOrquesta" id="hombreOrquesta">
+		<property name="instrumentos" ref="lista">
+		</property>
+	</bean>
+
+	<util:set id="lista">
+		<ref bean="tambor"></ref>
+		<ref bean="trompeta"></ref>
+		<ref bean="guitarra"></ref>
+	</util:set>
+ -->
+ 
+ <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+ 
+ <context:component-scan base-package="concierto"></context:component-scan>
+ 
+ <bean class="concierto.musicos.Solista" id="solista">
+ 	<property name="instrumento" ref="tambor"></property>
+ </bean>
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+</beans>
